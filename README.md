@@ -1,2 +1,3 @@
-# vim-autocomplete-recent-git-commit-message
-Displays recent commit messages as an auto-complete list.
+# vim-git-msg-wheel
+
+Show recent git commit messages and support line autocompletion.
