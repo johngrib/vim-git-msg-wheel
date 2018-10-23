@@ -2,9 +2,9 @@ if exists("g:loaded_autocomplete_recent_git_commit_message")
     finish
 endif
 let g:loaded_autocomplete_recent_git_commit_message = 1
-let g:autocomplete_recent_git_commit_message_key = '<C-l>'
-let g:autocomplete_recent_git_commit_message_length = 50
-let g:autocomplete_recent_git_commit_message_show = 1
+let g:autocomplete_recent_git_commit_message_key = get(g:, 'autocomplete_recent_git_commit_message_key', '<C-l>')
+let g:autocomplete_recent_git_commit_message_length = get(g:, 'autocomplete_recent_git_commit_message_length', 50)
+let g:autocomplete_recent_git_commit_message_show = get(g:, 'autocomplete_recent_git_commit_message_show', 1)
 
 augroup vim_autocomplete_recent_git_commit_message
     autocmd FileType gitcommit call s:printRecentGitLog()
