@@ -1,14 +1,14 @@
 if exists("g:loaded_autocomplete_recent_git_commit_message")
     finish
 endif
-let g:loaded_autocomplete_recent_git_commit_message = 1
-let g:autocomplete_recent_git_commit_message_key = get(g:, 'autocomplete_recent_git_commit_message_key', '<C-l>')
-let g:autocomplete_recent_git_commit_message_length = get(g:, 'autocomplete_recent_git_commit_message_length', 50)
-let g:autocomplete_recent_git_commit_message_show = get(g:, 'autocomplete_recent_git_commit_message_show', 1)
+let g:loaded_git_msg_wheel = 1
+let g:git_msg_wheel_key = get(g:, 'git_msg_wheel_key', '<C-l>')
+let g:git_msg_wheel_length = get(g:, 'git_msg_wheel_length', 50)
+let g:git_msg_wheel_list_show = get(g:, 'git_msg_wheel_list_show', 1)
 
 augroup vim_autocomplete_recent_git_commit_message
     autocmd FileType gitcommit call s:printRecentGitLog()
-    execute "autocmd FileType gitcommit inoremap " . g:autocomplete_recent_git_commit_message_key . " <C-r>=LastCommitMsg()<CR>"
+    execute "autocmd FileType gitcommit inoremap " . g:git_msg_wheel_key . " <C-r>=LastCommitMsg()<CR>"
 augroup END
 
 let s:executed = 0
@@ -21,7 +21,7 @@ function! s:printRecentGitLog()
     endif
     normal! Go
     let s:startLine = line('$')
-    silent execute 'r! git log --pretty=oneline | head -' . g:autocomplete_recent_git_commit_message_length . ' | sed "s/^/\#\# /"'
+    silent execute 'r! git log --pretty=oneline | head -' . g:git_msg_wheel_length . ' | sed "s/^/\#\# /"'
     normal! gg
     let s:commitMessages = getline(s:startLine, '$')
 
