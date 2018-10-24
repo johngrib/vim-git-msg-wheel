@@ -1,4 +1,4 @@
-if exists("g:loaded_autocomplete_recent_git_commit_message")
+if exists("g:loaded_git_msg_wheel")
     finish
 endif
 let g:loaded_git_msg_wheel = 1
