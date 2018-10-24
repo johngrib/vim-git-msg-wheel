@@ -59,6 +59,6 @@ let g:git_msg_wheel_length = 100
 * default value is `1`
 
 ```viml
-let g:git_msg_wheel_list_show = 0   # hide list
+let g:git_msg_wheel_list_show = 0   " hide list
 ```
 
