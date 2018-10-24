@@ -31,6 +31,10 @@ function! s:printRecentGitLog()
         let l:i += 1
     endfor
 
+    if g:git_msg_wheel_list_show != 1
+        normal! Gdip
+    endif
+
     let s:executed = 1
 endfunction
 
