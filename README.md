@@ -42,7 +42,7 @@ Then run the following in Vim:
 * default value is `<C-l>`
 
 ```viml
-# use ctrl+a to show commit message auto complete list
+" use ctrl+a to show commit message auto complete list
 let g:git_msg_wheel_key = '<C-a>'
 ```
 
