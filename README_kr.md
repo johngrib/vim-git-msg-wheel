@@ -66,6 +66,6 @@ let g:git_msg_wheel_length = 100
 * 기본값은 `1` 입니다. `1`이 on 이고, `0`이 off 입니다.
 
 ```viml
-let g:git_msg_wheel_list_show = 0   # 목록을 끈다
+let g:git_msg_wheel_list_show = 0   " 목록을 끈다
 ```
 
