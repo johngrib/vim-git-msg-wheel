@@ -17,6 +17,23 @@ Sometimes, however, I see the old commit message and try to recycle it.
 
 # Installation
 
+## .gitconfig
+
+Open .gitconfig, and check `editor` is specified as the vim you are using.
+
+```
+[core]
+    editor = /usr/local/bin/vim
+```
+
+The easiest way to find out what vim you are using is to check with `which vim`.
+
+```sh
+$ which vim
+```
+
+Please change if the path of .gitconfig.core.editor differs from the output of `which vim` command.
+
 ## VimPlug
 
 Place this in your .vimrc:
